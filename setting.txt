@@ -1,0 +1,8 @@
+The number of chains:15
+https://mattermost.web.cern.ch/hooks/fzxxhsjnkpg37mcje3cbrwkfwh
+https://www.dropbox.com/sh/d50irqpt1scovn6/AACeZqSz05-VUNenqdXlMI1Oa?dl=0
+20 develop
+10 stop
+60 fix
+60 wash1
+60 wash2
