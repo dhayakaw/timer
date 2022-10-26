@@ -402,7 +402,7 @@ void Clock::OnTimer(){
 	CT.Set(t);
 	int h = CT.GetHour()-twelve;
 	TString meridiem;
-	if(CT.GetHour()-twelve>0){
+	if(CT.GetHour()-twelve>=0){
 		text->DrawTextNDC(0.1,0.4, Form("%02d:%02d", h,CT.GetMinute()));
 		if(twelve==12){meridiem = "PM";}
 	}
@@ -668,7 +668,7 @@ DevTimer::DevTimer(TGVerticalFrame *fMainFrame, int id) : TGHorizontalFrame(fMai
    	fLabelChain->SetBackgroundColor(TColor::Number2Pixel(kBlack));
    	fLabelChain->SetTextColor(TColor::Number2Pixel(kRed+1));
    	AddFrame(fLabelChain, new TGLayoutHints(kLHintsLeft | kLHintsTop,2,2,2,2));
-   	fLabelChain->MoveResize(width_chainnum-3,5,44,20);
+   	fLabelChain->MoveResize(57,5,44,20);
 
 	fCombo->ChangeBackground(TColor::Number2Pixel(kRed+1));
 	fCombo->SetEnabled();
@@ -808,6 +808,9 @@ void DevTimer::OnTimer(){
 
 void DevTimer::Start(){
 	TQObject::Disconnect(fb_start);
+
+	gSystem->Exec("pkill -f capture");
+	gSystem->Exec("open capture.app");
 
 	TString a = Form("%d.",ID);
 	gSystem->Exec("say -v "+who_say+" \"start "+process[0]+" Chain"+a+"\""+" &");
@@ -1087,6 +1090,7 @@ void developtimer()
         fclose(fl);
     }
 	height_chainnum = height_timer + 20 - height_button - 10;
+	if(height_chainnum>60){height_chainnum=60;}
 	width_chainnum = height_chainnum;
 	new DevTimers;
 }  

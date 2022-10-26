@@ -343,7 +343,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>mv ~/Dropbox/timer/buffer/buffer.png ~/Dropbox/timer/time.png</string>
+					<string>mv ~/Dropbox/timer/buffer/buffer.png ~/Dropbox/timer/timer.png</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -453,8 +453,6 @@
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
@@ -566,8 +564,6 @@
 						<string>1</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
@@ -633,7 +629,7 @@
 					<key>loopUnit</key>
 					<integer>1</integer>
 					<key>loopValue</key>
-					<integer>500</integer>
+					<integer>480</integer>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Loop</string>
@@ -731,35 +727,58 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>09DE4237-B060-412E-B74B-3DD962A1C478</key>
-		<dict>
-			<key>from</key>
-			<string>19C56C1E-7799-4A74-9628-220272FBFABB - 19C56C1E-7799-4A74-9628-220272FBFABB</string>
-			<key>to</key>
-			<string>22355B85-EB33-4A51-ACF1-B9DD01ADAE4D - 22355B85-EB33-4A51-ACF1-B9DD01ADAE4D</string>
-		</dict>
-		<key>1F123F1A-675A-45D1-AE4F-D7E97444B817</key>
-		<dict>
-			<key>from</key>
-			<string>E88CD2BD-D8A3-40F2-871D-FD9FC385DD14 - E88CD2BD-D8A3-40F2-871D-FD9FC385DD14</string>
-			<key>to</key>
-			<string>19C56C1E-7799-4A74-9628-220272FBFABB - 19C56C1E-7799-4A74-9628-220272FBFABB</string>
-		</dict>
-		<key>9413DD39-0435-403C-8C61-0CB285D381F7</key>
+		<key>01947AFF-4D62-4AC4-8429-642C8EBF3F38</key>
 		<dict>
 			<key>from</key>
 			<string>96E5D0A4-6579-4114-9B21-F31F5384A660 - 96E5D0A4-6579-4114-9B21-F31F5384A660</string>
 			<key>to</key>
 			<string>E88CD2BD-D8A3-40F2-871D-FD9FC385DD14 - E88CD2BD-D8A3-40F2-871D-FD9FC385DD14</string>
 		</dict>
-		<key>E5960AB5-9927-4E0A-A5D4-208EAAAEE2F7</key>
+		<key>6108E8C1-ADD0-4DFE-BBB3-A2C17269DE3E</key>
 		<dict>
 			<key>from</key>
 			<string>8FD6544C-53A2-45A6-A032-E0EED5D89DD5 - 8FD6544C-53A2-45A6-A032-E0EED5D89DD5</string>
 			<key>to</key>
 			<string>96E5D0A4-6579-4114-9B21-F31F5384A660 - 96E5D0A4-6579-4114-9B21-F31F5384A660</string>
 		</dict>
+		<key>75418BB9-28A6-4641-B86A-61DDE1D83B86</key>
+		<dict>
+			<key>from</key>
+			<string>E88CD2BD-D8A3-40F2-871D-FD9FC385DD14 - E88CD2BD-D8A3-40F2-871D-FD9FC385DD14</string>
+			<key>to</key>
+			<string>19C56C1E-7799-4A74-9628-220272FBFABB - 19C56C1E-7799-4A74-9628-220272FBFABB</string>
+		</dict>
+		<key>BBFC96E7-6CF8-4A4A-95F0-7F82B8A3558E</key>
+		<dict>
+			<key>from</key>
+			<string>19C56C1E-7799-4A74-9628-220272FBFABB - 19C56C1E-7799-4A74-9628-220272FBFABB</string>
+			<key>to</key>
+			<string>22355B85-EB33-4A51-ACF1-B9DD01ADAE4D - 22355B85-EB33-4A51-ACF1-B9DD01ADAE4D</string>
+		</dict>
 	</dict>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>5BF21009-7399-404E-ABCE-43A5B55C2A93</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Path</string>
+			<key>name</key>
+			<string>パス</string>
+			<key>value</key>
+			<string>~/Desktop</string>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>91626BBE-1C58-4475-9CEF-1CB227F6C225</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Path</string>
+			<key>name</key>
+			<string>buffer</string>
+			<key>value</key>
+			<string>~/Dropbox/timer/buffer</string>
+		</dict>
+	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>workflowTypeIdentifier</key>
